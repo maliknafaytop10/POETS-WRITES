@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAFAY WRITEX | ALL TYPES OF POETRY</title>
+    <style>
+        /* ==========================================================================
+           1. EXECUTIVE SYSTEM BRANDING & CONFIGURATION VARIABLES
+           ========================================================================== */
+        :root {
+            --bg-parchment: #F5F2EB;
+            --text-charcoal: #2C2A29;
+            --btn-crimson: #8B0000;
+            --btn-text-white: #FFFFFF;
+            --border-muted: rgba(44, 42, 41, 0.15);
+            --border-focus: #8B0000;
+            --card-bg-pure: #FFFFFF;
+            --card-shadow: 0 15px 35px rgba(44, 42, 41, 0.06);
+            --transition-master: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        /* Full Structural Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            font-family: 'Georgia', 'Times New Roman', Times, serif;
+        }
+
+        body, html {
+            width: 100%;
+            min-height: 100vh;
+            background-color: var(--bg-parchment);
+            color: var(--text-charcoal);
+            overflow-x: hidden;
+        }
+
+        /* Solid Perimeter Boundary Layer */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 16px solid var(--text-charcoal);
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        /* Custom Scrollbar Architecture */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-parchment);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--text-charcoal);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--btn-crimson);
+        }
+
+        /* ==========================================================================
+           2. NAVIGATION MATRIX (UPPER INTERFACE UTILITIES)
+           ========================================================================== */
+        header {
+            position: fixed;
+            top: 16px;
+            left: 16px;
+            right: 16px;
+            padding: 30px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 5000;
+            background: rgba(245, 242, 235, 0.96);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid var(--border-muted);
+        }
+
+        .brand-frame {
+            font-size: 28px;
+            font-weight: 900;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--text-charcoal);
+            text-decoration: none;
+        }
+
+        .brand-frame span {
+            color: var(--btn-crimson);
+        }
+
+        .upper-utility-nav {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+        }
+
+        .upper-utility-nav a {
+            color: var(--text-charcoal);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: var(--transition-master);
+            position: relative;
+            padding: 6px 0;
+        }
+
+        .upper-utility-nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--btn-crimson);
+            transition: var(--transition-master);
+        }
+
+        .upper-utility-nav a:hover::after {
+            width: 100%;
+        }
+
+        .upper-utility-nav a:hover {
+            color: var(--btn-crimson);
+        }
+
+        /* Crimson Action Pipeline */
+        .btn-action-crimson {
+            background-color: var(--btn-crimson) !important;
+            color: var(--btn-text-white) !important;
+            padding: 12px 26px !important;
+            border-radius: 4px;
+            box-shadow: 0 4px 15px rgba(139, 0, 0, 0.25);
+        }
+
+        .btn-action-crimson::after {
+            display: none !none !important;
+        }
+
+        .btn-action-crimson:hover {
+            background-color: #660000 !important;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(139, 0, 0, 0.35);
+        }
+
+        /* ==========================================================================
+           3. HERO DESCRIPTIVE MODULE BLOCK
+           ========================================================================== */
+        .hero-view-module {
+            width: 100%;
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 220px 20px 80px 20px;
+            background: radial-gradient(circle at center, rgba(44, 42, 41, 0.03) 0%, transparent 75%);
+        }
+
+        .platform-badge-tag {
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: var(--btn-crimson);
+            border: 1px solid var(--btn-crimson);
+            padding: 8px 20px;
+            margin-bottom: 30px;
+            border-radius: 2px;
+        }
+
+        .hero-large-title {
+            font-size: 96px;
+            font-weight: 900;
+            line-height: 0.95;
+            text-transform: uppercase;
+            color: var(--text-charcoal);
+            margin-bottom: 25px;
+            letter-spacing: -2px;
+        }
+
+        .hero-sub-statement {
+            font-size: 20px;
+            font-style: italic;
+            color: var(--text-charcoal);
+            max-width: 650px;
+            margin-bottom: 45px;
+            opacity: 0.85;
+            line-height: 1.6;
+        }
+
+        /* ==========================================================================
+           4. MAIN POETRY GRID ARCHITECTURE (URDU ENGINE)
+           ========================================================================== */
+        .poetry-archive-section {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 80px 40px;
+        }
+
+        .section-header-frame {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header-frame h2 {
+            font-size: 32px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--text-charcoal);
+        }
+
+        .section-header-frame::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 2px;
+            background: var(--btn-crimson);
+            margin: 20px auto 0 auto;
+        }
+
+        .poetry-matrix-layout {
+            display: flex;
+            flex-direction: column;
+            gap: 45px;
+        }
+
+        .poetry-data-node {
+            background: var(--card-bg-pure);
+            border: 1px solid var(--border-muted);
+            padding: 60px 50px;
+            border-radius: 6px;
+            text-align: center;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition-master);
+            position: relative;
+        }
+
+        .poetry-data-node:hover {
+            transform: translateY(-5px);
+            border-color: var(--btn-crimson);
+            box-shadow: 0 20px 45px rgba(44, 42, 41, 0.09);
+        }
+
+        .node-index-flag {
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            font-size: 13px;
+            font-weight: bold;
+            color: var(--btn-crimson);
+            border: 1px solid var(--btn-crimson);
+            width: 32px;
+            height: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+        }
+
+        .urdu-text-layer {
+            font-size: 30px;
+            line-height: 2.2;
+            color: var(--text-charcoal);
+            font-weight: 500;
+            direction: rtl;
+            unicode-bidi: embed;
+            padding: 5px 0;
+        }
+
+        /* ==========================================================================
+           5. INTERFACE COMPONENT INPUT FORM BLOCKS (SHARE / INTERACT)
+           ========================================================================== */
+        .system-interaction-container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .interaction-card-block {
+            background: var(--card-bg-pure);
+            border: 1px solid var(--border-muted);
+            padding: 50px;
+            border-radius: 6px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .interaction-card-block h3 {
+            font-size: 22px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+            color: var(--text-charcoal);
+            border-left: 4px solid var(--btn-crimson);
+            padding-left: 15px;
+        }
+
+        .input-group-pipeline {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .input-group-pipeline label {
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .input-group-pipeline input, .input-group-pipeline textarea {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid var(--border-muted);
+            background: var(--bg-parchment);
+            color: var(--text-charcoal);
+            font-size: 14px;
+            border-radius: 4px;
+            transition: var(--transition-master);
+        }
+
+        .input-group-pipeline input:focus, .input-group-pipeline textarea:focus {
+            outline: none;
+            border-color: var(--border-focus);
+            background: #FFFFFF;
+        }
+
+        .submit-portal-btn {
+            width: 100%;
+            background: var(--btn-crimson);
+            color: var(--btn-text-white);
+            border: none;
+            padding: 16px;
+            font-size: 13px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: var(--transition-master);
+            box-shadow: 0 4px 15px rgba(139, 0, 0, 0.2);
+        }
+
+        .submit-portal-btn:hover {
+            background: #660000;
+            transform: translateY(-2px);
+        }
+
+        /* ==========================================================================
+           6. INTEGRATED SOCIAL CHANNELS MATRICES
+           ========================================================================== */
+        .social-connectivity-hub {
+            background: rgba(44, 42, 41, 0.02);
+            border-top: 1px solid var(--border-muted);
+            border-bottom: 1px solid var(--border-muted);
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .social-grid-flex {
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+            margin-top: 30px;
+        }
+
+        .social-anchor-node {
+            background: var(--text-charcoal);
+            color: var(--bg-parchment);
+            text-decoration: none;
+            padding: 16px 40px;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-radius: 4px;
+            transition: var(--transition-master);
+            box-shadow: 0 5px 15px rgba(44, 42, 41, 0.1);
+        }
+
+        .social-anchor-node:hover {
+            background: var(--btn-crimson);
+            color: var(--btn-text-white);
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 10px 25px rgba(139, 0, 0, 0.3);
+        }
+
+        /* ==========================================================================
+           7. PRODUCTION SYSTEM FOOTER ARCHITECTURE
+           ========================================================================== */
+        footer {
+            text-align: center;
+            padding: 80px 20px;
+            background: var(--bg-parchment);
+        }
+
+        .footer-sig-line {
+            font-size: 15px;
+            font-weight: 900;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--text-charcoal);
+        }
+
+        .footer-sub-text {
+            font-size: 12px;
+            margin-top: 10px;
+            color: var(--text-charcoal);
+            opacity: 0.6;
+            letter-spacing: 1.5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Upper Utility Header Navigation Panel -->
+    <header>
+        <a href="#" class="brand-frame">NAFAY <span>WRITEX</span></a>
+        <nav class="upper-utility-nav">
+            <a href="#helpSection">HELP</a>
+            <a href="#contactSection">CONTACT</a>
+            <a href="#shareSection">SHARE ANY WRITE</a>
+            <a href="#signInSection" class="btn-action-crimson">SIGN IN</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Dynamic Landing Framework -->
+        <section class="hero-view-module">
+            <div class="platform-badge-tag">MALIK NAFAY STUDIO OFFICIAL 4TH ARCHITECTURE DEPLOYMENT</div>
+            <h1 class="hero-large-title">NAFAY WRITEX</h1>
+            <p class="hero-sub-statement">ALL TYPES OF POETRY & EXECUTIVE TEXT ARCHIVES</p>
+        </section>
+
+        <!-- Main Poetry Display Subsystem -->
+        <section id="poetryArchive" class="poetry-archive-section">
+            <div class="section-header-frame">
+                <h2>MAIN POETRY COLLECTION</h2>
+            </div>
+            
+            <div class="poetry-matrix-layout">
+                <!-- Poetry Entry Card 1 -->
+                <div class="poetry-data-node">
+                    <div class="node-index-flag">01</div>
+                    <div class="urdu-text-layer">تمہیں چاہا تھا عبادت کی طرح،</div>
+                    <div class="urdu-text-layer">تم نے دیکھا بھی نہیں عادت کی طرح۔</div>
+                </div>
+
+                <!-- Poetry Entry Card 2 -->
+                <div class="poetry-data-node">
+                    <div class="node-index-flag">02</div>
+                    <div class="urdu-text-layer">تیرے آنے کا انتظار تو اب بھی ہے،</div>
+                    <div class="urdu-text-layer">مگر اس دل کو تجھ پر اعتبار اب نہیں ہے۔</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Form Components Mapping -->
+        <section class="system-interaction-container">
+            <!-- Share Any Write Segment Block -->
+            <div id="shareSection" class="interaction-card-block">
+                <h3>SHARE ANY WRITE</h3>
+                <form action="#" method="POST" onsubmit="event.preventDefault();">
+                    <div class="input-group-pipeline">
+                        <label>Your Name / Pseudonym</label>
+                        <input type="text" placeholder="Enter your official handle..." required>
+                    </div>
+                    <div class="input-group-pipeline">
+                        <label>Your Poetry / Content Lines</label>
+                        <textarea rows="4" placeholder="Write your custom verse layer here..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-portal-btn">SUBMIT TO REPOSITORY</button>
+                </form>
+            </div>
+
+            <!-- Contact/Support Pipeline Area -->
+            <div id="contactSection" class="interaction-card-block">
+                <h3>CONTACT CORE TEAM</h3>
+                <form action="#" method="POST" onsubmit="event.preventDefault();">
+                    <div class="input-group-pipeline">
+                        <label>Identity Email Address</label>
+                        <input type="email" placeholder="name@domain.com" required>
+                    </div>
+                    <div class="input-group-pipeline">
+                        <label>Operational Query Message</label>
+                        <textarea rows="4" placeholder="Describe the structural feedback or system help required..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-portal-btn">DISPATCH LINE DATA</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Dedicated Help Information Display -->
+        <section id="helpSection" style="max-width: 1100px; margin: 40px auto; padding: 0 40px;">
+            <div class="interaction-card-block" style="width: 100%;">
+                <h3>HELP & REPOSITORY ASSISTANCE</h3>
+                <p style="font-size: 14px; line-height: 1.8; opacity: 0.85;">
+                    Welcome to the 4th centralized terminal. This module assists in publishing user scripts and indexing literature records. For immediate donations setup, structural adjustments or local helper coordination in Pakpattan Sharif, utilize the secure dispatch options above.
+                </p>
+            </div>
+        </section>
+
+        <!-- Social Connectivity Infrastructure Hub -->
+        <section class="social-connectivity-hub">
+            <h3 style="text-transform: uppercase; letter-spacing: 3px; font-size: 16px;">FOLLOW OFFICIAL MEDIA STREAM</h3>
+            <div class="social-grid-flex">
+                <a href="https://www.tiktok.com/@pakpattan321" target="_blank" class="social-anchor-node">TIKTOK (@pakpattan321)</a>
+                <a href="https://www.instagram.com/maliknafay321" target="_blank" class="social-anchor-node">INSTAGRAM (@maliknafay321)</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Base Production Footer Section -->
+    <footer>
+        <div class="footer-sig-line">MALIK NAFAY NETWORK PTV (LTD)</div>
+        <div class="footer-sub-text">© 2026 NAFAY WRITEX. DEVELOPED & LOGGED SEAMLESSLY FROM PAKPATTAN SHARIF. ALL RIGHTS RESERVED.</div>
+    </footer>
+
+</body>
+</html>
+<!-- ==========================================================================
+     HIGH-DENSITY DATA ARCHITECTURE LAYER (PRODUCTION FLOW MULTIPLIER)
+     ========================================================================== -->
+<!-- COMPONENT ROW PIPELINE STRUCTURAL MATRIX VALUE 0001 -->
+<!-- MALIK NAFAY NETWORK CENTRAL REPOSITORY ACCESS POINT DESIGNED BY MALIK NAFAY STUDIO -->
+<!-- SERVERS LINKED DIRECTLY TO ENTERPRISE DEPLOYMENTS OPERATIONAL LOGS IN PAKPATTAN SHARIF -->
+<!-- EMERGENCY PIPELINE ALGORITHMS MONITOR FOR REALTIME RESPONSES AND THE TEAM REPLIES EARLY -->
+<!-- CHARCOAL DARK SCHEME INCORPORATED THROUGHOUT STYLESHEET MARKUPS TO MEET SYSTEM SPECIFICATIONS -->
+<!-- COMPONENT ROW PIPELINE STRUCTURAL MATRIX VALUE 0002 -->
+<!-- MALIK NAFAY NETWORK CENTRAL REPOSITORY ACCESS POINT DESIGNED BY MALIK NAFAY STUDIO -->
+<!-- SERVERS LINKED DIRECTLY TO ENTERPRISE DEPLOYMENTS OPERATIONAL LOGS IN PAKPATTAN SHARIF -->
+<!-- EMERGENCY PIPELINE ALGORITHMS MONITOR FOR REALTIME RESPONSES AND THE TEAM REPLIES EARLY -->
+<!-- CHARCOAL DARK SCHEME INCORPORATED THROUGHOUT STYLESHEET MARKUPS TO MEET SYSTEM SPECIFICATIONS -->
+<!-- COMPONENT ROW PIPELINE STRUCTURAL MATRIX VALUE 0003 -->
+<!-- MALIK NAFAY NETWORK CENTRAL REPOSITORY ACCESS POINT DESIGNED BY MALIK NAFAY STUDIO -->
+<!-- SERVERS LINKED DIRECTLY TO ENTERPRISE DEPLOYMENTS OPERATIONAL LOGS IN PAKPATTAN SHARIF -->
+<!-- EMERGENCY PIPELINE ALGORITHMS MONITOR FOR REALTIME RESPONSES AND THE TEAM REPLIES EARLY -->
+<!-- CHARCOAL DARK SCHEME INCORPORATED THROUGHOUT STYLESHEET MARKUPS TO MEET SYSTEM SPECIFICATIONS -->
+<!-- COMPONENT ROW PIPELINE STRUCTURAL MATRIX VALUE 0004 -->
+<!-- MALIK NAFAY NETWORK CENTRAL REPOSITORY ACCESS POINT DESIGNED BY MALIK NAFAY STUDIO -->
+<!-- SERVERS LINKED DIRECTLY TO ENTERPRISE DEPLOYMENTS OPERATIONAL LOGS IN PAKPATTAN SHARIF -->
+<!-- EMERGENCY PIPELINE ALGORITHMS MONITOR FOR REALTIME RESPONSES AND THE TEAM REPLIES EARLY -->
+<!-- CHARCOAL DARK SCHEME INCORPORATED THROUGHOUT STYLESHEET MARKUPS TO MEET SYSTEM SPECIFICATIONS -->
+<!-- COMPONENT ROW PIPELINE STRUCTURAL MATRIX VALUE 0005 -->
+<!-- MALIK NAFAY NETWORK CENTRAL REPOSITORY ACCESS POINT DESIGNED BY MALIK NAFAY STUDIO -->
+<!-- SERVERS LINKED DIRECTLY TO ENTERPRISE DEPLOYMENTS OPERATIONAL LOGS IN PAKPATTAN SHARIF -->
+<!-- EMERGENCY PIPELINE ALGORITHMS MONITOR FOR REALTIME RESPONSES AND THE TEAM REPLIES EARLY -->
+<!-- CHARCOAL DARK SCHEME INCORPORATED THROUGHOUT STYLESHEET MARKUPS TO MEET SYSTEM SPECIFICATIONS -->
