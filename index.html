@@ -1,23 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ur">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NAFAY WRITEX | ALL TYPES OF POETRY</title>
+    <title>NAFAY WRITE OFFICIAL | ARCHITECTURE 06</title>
+    
+    <!-- Google Fonts Integration Framework -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Nastaliq+Urdu:wght@400;700&family=Playfair+Display:ital,wght@0,700;0,900;1,400&display=swap" rel="stylesheet">
+
     <style>
         /* ==========================================================================
-           1. CORE ARCHITECTURE - PREMIUM EXECUTIVE VINTAGE PARCHMENT BRANDING
+           1. COMPILER VARIABLE DEFINITIONS & RESET LOGICS
            ========================================================================== */
         :root {
-            --bg-parchment: #F5F2EB;
-            --text-charcoal: #2C2A29;
-            --btn-crimson: #8B0000;
-            --btn-text-white: #FFFFFF;
-            --border-muted: rgba(44, 42, 41, 0.15);
-            --border-focus: #8B0000;
-            --card-bg-pure: #FFFFFF;
-            --card-shadow: 0 15px 35px rgba(44, 42, 41, 0.06);
-            --transition-master: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --bg-olive: #1E251A;
+            --text-cream: #F4F1EA;
+            --accent-gold: #D4A373;
+            --card-surface: #262E21;
+            --border-muted: rgba(212, 163, 115, 0.15);
+            --transition-master: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
 
         * {
@@ -25,18 +28,18 @@
             padding: 0;
             box-sizing: border-box;
             scroll-behavior: smooth;
-            font-family: 'Georgia', 'Times New Roman', Times, serif;
         }
 
-        body, html {
-            width: 100%;
+        body {
+            background-color: var(--bg-olive);
+            color: var(--text-cream);
+            font-family: 'Inter', sans-serif;
             min-height: 100vh;
-            background-color: var(--bg-parchment);
-            color: var(--text-charcoal);
             overflow-x: hidden;
+            cursor: none; /* Disables default pointer for custom gold dot matrix */
         }
 
-        /* Solid Structural Perimeter Framework Edge */
+        /* Continuous Global Framework Frame Outer Perimeter */
         body::before {
             content: "";
             position: fixed;
@@ -44,921 +47,963 @@
             left: 0;
             right: 0;
             bottom: 0;
-            border: 16px solid var(--text-charcoal);
+            border: 12px solid var(--accent-gold);
             pointer-events: none;
             z-index: 9999;
         }
 
+        /* Custom Processing Scrollbar Layout */
         ::-webkit-scrollbar {
             width: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: var(--bg-parchment);
+            background: var(--bg-olive);
         }
         ::-webkit-scrollbar-thumb {
-            background: var(--text-charcoal);
+            background: var(--accent-gold);
             border-radius: 4px;
         }
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--btn-crimson);
+
+        /* Custom Floating Cursor Core Element */
+        #customCursor {
+            width: 8px;
+            height: 8px;
+            background-color: var(--accent-gold);
+            border-radius: 50%;
+            position: fixed;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            z-index: 10000;
+            transition: width 0.2s, height 0.2s, background-color 0.2s;
+            box-shadow: 0 0 10px var(--accent-gold);
+        }
+
+        #customCursor.hover-active {
+            width: 24px;
+            height: 24px;
+            background-color: transparent;
+            border: 2px solid var(--text-cream);
+            box-shadow: none;
         }
 
         /* ==========================================================================
-           2. EXECUTIVE NAVIGATIONAL MATRIX LAYER
+           2. NAVIGATION DESIGN PIPELINES
            ========================================================================== */
         header {
-            position: fixed;
-            top: 16px;
-            left: 16px;
-            right: 16px;
-            padding: 30px 60px;
+            width: 100%;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 30px 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            z-index: 5000;
-            background: rgba(245, 242, 235, 0.96);
-            backdrop-filter: blur(15px);
             border-bottom: 1px solid var(--border-muted);
+            background: rgba(30, 37, 26, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 2000;
         }
 
-        .brand-frame {
-            font-size: 28px;
+        .brand-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
             font-weight: 900;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: var(--text-charcoal);
+            color: var(--text-cream);
             text-decoration: none;
-        }
-
-        .brand-frame span {
-            color: var(--btn-crimson);
-        }
-
-        .upper-utility-nav {
-            display: flex;
-            align-items: center;
-            gap: 35px;
-        }
-
-        .upper-utility-nav a {
-            color: var(--text-charcoal);
-            text-decoration: none;
-            font-size: 13px;
-            font-weight: bold;
             letter-spacing: 2px;
             text-transform: uppercase;
-            transition: var(--transition-master);
-            position: relative;
-            padding: 6px 0;
+            animation: slowPulse 3s infinite ease-in-out; /* Animation Feature 02 */
         }
 
-        .upper-utility-nav a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--btn-crimson);
-            transition: var(--transition-master);
+        .brand-logo span {
+            color: var(--accent-gold);
         }
 
-        .upper-utility-nav a:hover::after {
-            width: 100%;
+        /* Logo Slow Pulse/Breathe Animation Logic */
+        @keyframes slowPulse {
+            0%, 100% { opacity: 0.7; transform: scale(1); text-shadow: 0 0 0px rgba(212,163,115,0); }
+            50% { opacity: 1; transform: scale(1.03); text-shadow: 0 0 15px rgba(212,163,115,0.4); }
         }
 
-        .upper-utility-nav a:hover {
-            color: var(--btn-crimson);
-        }
-
-        .btn-action-crimson {
-            background-color: var(--btn-crimson) !important;
-            color: var(--btn-text-white) !important;
-            padding: 12px 26px !important;
-            border-radius: 4px;
-            box-shadow: 0 4px 15px rgba(139, 0, 0, 0.25);
-        }
-
-        .btn-action-crimson:hover {
-            background-color: #660000 !important;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(139, 0, 0, 0.35);
-        }
-
-        /* ==========================================================================
-           3. HERO DESCRIPTIVE WORKFLOW BLOCK
-           ========================================================================== */
-        .hero-view-module {
-            width: 100%;
-            min-height: 85vh;
+        .nav-utility-bar {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
             align-items: center;
-            text-align: center;
-            padding: 220px 20px 80px 20px;
-            background: radial-gradient(circle at center, rgba(44, 42, 41, 0.03) 0%, transparent 75%);
+            gap: 25px;
         }
 
-        .platform-badge-tag {
+        .nav-utility-bar a, .filter-btn, .ui-action-btn {
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--text-cream);
+            text-decoration: none;
+            background: transparent;
+            border: 1px solid var(--border-muted);
+            padding: 12px 24px;
+            border-radius: 4px;
+            cursor: none;
+            transition: var(--transition-master); /* Animation Feature 04 Scaling/Color */
+        }
+
+        .nav-utility-bar a:hover, .filter-btn:hover, .ui-action-btn:hover, .filter-btn.active-category {
+            background-color: var(--accent-gold);
+            color: var(--bg-olive);
+            border-color: var(--accent-gold);
+            transform: scale(1.06);
+        }
+
+        .social-links-container {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icon-anchor {
             font-size: 11px;
             font-weight: bold;
-            letter-spacing: 5px;
-            text-transform: uppercase;
-            color: var(--btn-crimson);
-            border: 1px solid var(--btn-crimson);
-            padding: 8px 20px;
-            margin-bottom: 30px;
-            border-radius: 2px;
+            color: var(--accent-gold);
+            text-decoration: none;
+            letter-spacing: 1px;
+            border-bottom: 1px dashed var(--accent-gold);
+            padding-bottom: 2px;
+            transition: var(--transition-master);
         }
 
-        .hero-large-title {
-            font-size: 96px;
-            font-weight: 900;
-            line-height: 0.95;
-            text-transform: uppercase;
-            color: var(--text-charcoal);
-            margin-bottom: 25px;
-            letter-spacing: -2px;
-        }
-
-        .hero-sub-statement {
-            font-size: 20px;
-            font-style: italic;
-            color: var(--text-charcoal);
-            max-width: 650px;
-            margin-bottom: 45px;
-            opacity: 0.85;
-            line-height: 1.6;
+        .social-icon-anchor:hover {
+            color: var(--text-cream);
+            border-color: var(--text-cream);
         }
 
         /* ==========================================================================
-           4. MAIN POETRY ARCHIVE EXPANSION PIPELINE (INDEX 01 - 60)
+           3. HERO LANDING ENGINE (MAIN TITLE)
            ========================================================================== */
-        .poetry-archive-section {
+        .hero-viewport-terminal {
             width: 100%;
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 40px 40px 80px 40px;
-        }
-
-        .section-header-frame {
+            padding: 100px 20px 60px 20px;
             text-align: center;
-            margin-bottom: 60px;
         }
 
-        .section-header-frame h2 {
-            font-size: 32px;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            color: var(--text-charcoal);
+        .main-hero-title {
+            font-family: 'Noto Nastaliq Urdu', serif;
+            font-size: 46px;
+            line-height: 2.3;
+            color: var(--text-cream);
+            direction: rtl;
+            margin-bottom: 30px;
+            opacity: 0;
+            transform: translateY(40px);
+            animation: smoothFadeSlideUp 1.5s forwards cubic-bezier(0.25, 1, 0.5, 1); /* Animation Feature 01 */
         }
 
-        .section-header-frame::after {
-            content: "";
-            display: block;
-            width: 80px;
-            height: 2px;
-            background: var(--btn-crimson);
-            margin: 20px auto 0 auto;
+        @keyframes smoothFadeSlideUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
-        .poetry-matrix-layout {
+        /* Category Filter Row Control Station */
+        .filter-matrix-row {
             display: flex;
-            flex-direction: column;
-            gap: 45px;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 40px auto;
+            max-width: 1100px;
+            padding: 0 20px;
         }
 
-        .poetry-data-node {
-            background: var(--card-bg-pure);
+        /* ==========================================================================
+           4. HIGH-DENSITY POETRY ARCHIVE STORAGE GRID (110 SHERS)
+           ========================================================================== */
+        .poetry-grid-pipeline {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 30px;
+            padding: 40px 20px;
+        }
+
+        .poetry-card-node {
+            background-color: var(--card-surface);
             border: 1px solid var(--border-muted);
-            padding: 50px;
             border-radius: 6px;
-            text-align: center;
-            box-shadow: var(--card-shadow);
-            transition: var(--transition-master);
+            padding: 40px 30px;
             position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            transition: var(--transition-master);
+            opacity: 0;
+            transform: translateY(30px);
         }
 
-        .poetry-data-node:hover {
-            transform: translateY(-5px);
-            border-color: var(--btn-crimson);
-            box-shadow: 0 20px 45px rgba(44, 42, 41, 0.09);
+        /* Staggered Dynamic Class added via JavaScript Interface Interaction */
+        .poetry-card-node.reveal-node {
+            opacity: 1;
+            transform: translateY(0);
         }
 
-        .node-index-flag {
-            position: absolute;
-            top: 25px;
-            left: 25px;
-            font-size: 13px;
-            font-weight: bold;
-            color: var(--btn-crimson);
-            border: 1px solid var(--btn-crimson);
-            width: 35px;
-            height: 35px;
+        .poetry-card-node:hover {
+            border-color: var(--accent-gold);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(212, 163, 115, 0.1);
+        }
+
+        .card-meta-tag {
+            font-family: 'Inter', sans-serif;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            border-bottom: 1px solid rgba(212, 163, 115, 0.1);
+            padding-bottom: 8px;
+        }
+
+        .urdu-poetry-content-line {
+            font-family: 'Noto Nastaliq Urdu', serif;
+            font-size: 21px;
+            line-height: 2.4;
+            color: var(--text-cream);
+            text-align: center;
+            direction: rtl;
+            unicode-bidi: embed;
+        }
+
+        /* ==========================================================================
+           5. INTERACTIVE FUNCTIONAL SYSTEM GATEWAYS (SIGN IN & FOOTER)
+           ========================================================================== */
+        #signInModal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(30, 37, 26, 0.98);
+            z-index: 99999;
             display: flex;
             justify-content: center;
             align-items: center;
-            border-radius: 50%;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
         }
 
-        .urdu-text-layer {
-            font-size: 28px;
-            line-height: 2.2;
-            color: var(--text-charcoal);
-            font-weight: 500;
-            direction: rtl;
-            unicode-bidi: embed;
-            padding: 5px 0;
+        #signInModal.modal-open {
+            opacity: 1;
+            pointer-events: auto;
         }
 
-        /* ==========================================================================
-           5. INTERFACE DATA INTERACTION SYSTEMS (SUBMISSIONS / TICKETS)
-           ========================================================================== */
-        .system-interaction-container {
-            width: 100%;
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 40px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-        }
-
-        .interaction-card-block {
-            background: var(--card-bg-pure);
-            border: 1px solid var(--border-muted);
+        .sign-in-box-module {
+            background: var(--card-surface);
+            border: 1px solid var(--accent-gold);
             padding: 50px;
-            border-radius: 6px;
-            box-shadow: var(--card-shadow);
-        }
-
-        .interaction-card-block h3 {
-            font-size: 22px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 25px;
-            color: var(--text-charcoal);
-            border-left: 4px solid var(--btn-crimson);
-            padding-left: 15px;
-        }
-
-        .input-group-pipeline {
-            margin-bottom: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .input-group-pipeline label {
-            font-size: 12px;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .input-group-pipeline input, .input-group-pipeline textarea {
+            border-radius: 8px;
             width: 100%;
-            padding: 14px;
-            border: 1px solid var(--border-muted);
-            background: var(--bg-parchment);
-            color: var(--text-charcoal);
-            font-size: 14px;
-            border-radius: 4px;
-            transition: var(--transition-master);
-        }
-
-        .input-group-pipeline input:focus, .input-group-pipeline textarea:focus {
-            outline: none;
-            border-color: var(--border-focus);
-            background: #FFFFFF;
-        }
-
-        .submit-portal-btn {
-            width: 100%;
-            background: var(--btn-crimson);
-            color: var(--btn-text-white);
-            border: none;
-            padding: 16px;
-            font-size: 13px;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: var(--transition-master);
-            box-shadow: 0 4px 15px rgba(139, 0, 0, 0.2);
-        }
-
-        .submit-portal-btn:hover {
-            background: #660000;
-            transform: translateY(-2px);
-        }
-
-        /* ==========================================================================
-           6. INTEGRATED SOCIAL NETWORKS METRICS
-           ========================================================================== */
-        .social-connectivity-hub {
-            background: rgba(44, 42, 41, 0.02);
-            border-top: 1px solid var(--border-muted);
-            border-bottom: 1px solid var(--border-muted);
-            padding: 80px 20px;
+            max-width: 420px;
             text-align: center;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
         }
 
-        .social-grid-flex {
+        .sign-in-box-module h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
+        .form-input-pipeline {
+            width: 100%;
+            background: var(--bg-olive);
+            border: 1px solid var(--border-muted);
+            padding: 14px;
+            color: var(--text-cream);
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            outline: none;
+            transition: var(--transition-master);
+        }
+
+        .form-input-pipeline:focus {
+            border-color: var(--accent-gold);
+            background: #222B1E;
+        }
+
+        .system-modal-close-trigger {
+            font-size: 11px;
+            color: var(--accent-gold);
+            cursor: none;
+            background: transparent;
+            border: none;
+            margin-top: 20px;
+            text-decoration: underline;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* Support Block & Branded Footer Configuration Layout */
+        footer {
+            width: 100%;
+            max-width: 1300px;
+            margin: 60px auto 0 auto;
+            padding: 60px 40px;
+            border-top: 1px solid var(--border-muted);
+            text-align: center;
+            background: rgba(30, 37, 26, 0.5);
+        }
+
+        .support-wrapper-box {
+            margin-bottom: 40px;
+        }
+
+        .footer-social-wrapper {
+            margin-bottom: 30px;
             display: flex;
             justify-content: center;
-            gap: 35px;
-            margin-top: 30px;
+            gap: 30px;
         }
 
-        .social-anchor-node {
-            background: var(--text-charcoal);
-            color: var(--bg-parchment);
-            text-decoration: none;
-            padding: 16px 40px;
-            font-size: 13px;
-            font-weight: bold;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            border-radius: 4px;
-            transition: var(--transition-master);
-            box-shadow: 0 5px 15px rgba(44, 42, 41, 0.1);
-        }
-
-        .social-anchor-node:hover {
-            background: var(--btn-crimson);
-            color: var(--btn-text-white);
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 10px 25px rgba(139, 0, 0, 0.3);
-        }
-
-        /* ==========================================================================
-           7. PRODUCTION SYSTEM FOOTER LOGICS
-           ========================================================================== */
-        footer {
-            text-align: center;
-            padding: 80px 20px;
-            background: var(--bg-parchment);
-        }
-
-        .footer-sig-line {
-            font-size: 15px;
-            font-weight: 900;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            color: var(--text-charcoal);
-        }
-
-        .footer-sub-text {
+        .branded-copyright-note {
+            font-family: 'Inter', sans-serif;
             font-size: 12px;
-            margin-top: 10px;
-            color: var(--text-charcoal);
+            letter-spacing: 2px;
+            color: var(--text-cream);
             opacity: 0.6;
-            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
 
-    <!-- Upper Matrix Utility Navigation Panel Header -->
+    <!-- Target Element for Custom Cursor Control Logic -->
+    <div id="customCursor"></div>
+
+    <!-- Main Navigation Architecture Block -->
     <header>
-        <a href="#" class="brand-frame">NAFAY <span>WRITEX</span></a>
-        <nav class="upper-utility-nav">
-            <a href="#helpSection">HELP</a>
-            <a href="#contactSection">CONTACT</a>
-            <a href="#shareSection">SHARE ANY WRITE</a>
-            <a href="#signInSection" class="btn-action-crimson">SIGN IN</a>
+        <a href="#" class="brand-logo">NAFAY <span>WRITE OFFICIAL</span></a>
+        <nav class="nav-utility-bar">
+            <a href="#helpNode">HELP</a>
+            <a href="#contactNode">CONTACT</a>
+            <button class="ui-action-btn" onclick="toggleSignInSystem(true)">SIGN IN</button>
         </nav>
     </header>
 
     <main>
-        <!-- Hero Decorative Section Landing Block -->
-        <section class="hero-view-module">
-            <div class="platform-badge-tag">MALIK NAFAY STUDIO OFFICIAL 4TH ARCHITECTURE DEPLOYMENT</div>
-            <h1 class="hero-large-title">NAFAY WRITEX</h1>
-            <p class="hero-sub-statement">ALL TYPES OF POETRY & EXECUTIVE TEXT ARCHIVES</p>
-        </section>
-
-        <!-- Dynamic Poetry Matrix Grid Area -->
-        <section id="poetryArchive" class="poetry-archive-section">
-            <div class="section-header-frame">
-                <h2>MAIN POETRY COLLECTION</h2>
-            </div>
+        <!-- Hero Dynamic Landing Stage -->
+        <section class="hero-viewport-terminal">
+            <h1 class="main-hero-title">تمہیں خبر ہی نہیں، کوئی تم پر مرتا ہے</h1>
             
-            <div class="poetry-matrix-layout">
-                <!-- Poetry Entry Card 1 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">01</div>
-                    <div class="urdu-text-layer">تمہیں چاہا تھا عبادت کی طرح،</div>
-                    <div class="urdu-text-layer">تم نے دیکھا بھی نہیں عادت کی طرح۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 2 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">02</div>
-                    <div class="urdu-text-layer">تیرے آنے کا انتظار تو اب بھی ہے،</div>
-                    <div class="urdu-text-layer">مگر اس دل کو تجھ پر اعتبار اب نہیں ہے۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 3 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">03</div>
-                    <div class="urdu-text-layer">وہ میرا کبھی تھا ہی نہیں،</div>
-                    <div class="urdu-text-layer">پھر بھی کھونے کا ڈر رہا۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 4 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">04</div>
-                    <div class="urdu-text-layer">وہ میری دعاؤں میں شامل رہا،</div>
-                    <div class="urdu-text-layer">اور میں اس کی خواہشوں میں भी نہ تھا۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 5 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">05</div>
-                    <div class="urdu-text-layer">دل تو کرتا ہے کہ روٹھ جاؤں تجھ سے،</div>
-                    <div class="urdu-text-layer">پھر یاد آتا ہے کہ منانے والا کوئی نہیں ہے۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 6 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">06</div>
-                    <div class="urdu-text-layer">ہم نے تو دل ہارے تھے تم پر،</div>
-                    <div class="urdu-text-layer">تم نے تو ہمیں انسان بھی نہ سمجھا۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 7 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">07</div>
-                    <div class="urdu-text-layer">کچھ تو تنہائی کا اثر بھی تھا دل پر،</div>
-                    <div class="urdu-text-layer">کچھ تیری بے رخی نے مار دیا ہمیں ۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 8 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">08</div>
-                    <div class="urdu-text-layer">اب کس سے کریں گلہ ہم اپنی محبت کا،</div>
-                    <div class="urdu-text-layer">وہ خود ہی بدل گئے جو کبھی جان کہتے تھے۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 9 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">09</div>
-                    <div class="urdu-text-layer">تم نے تو کہہ دیا کہ کوئی واسطہ نہیں اب،</div>
-                    <div class="urdu-text-layer">مگر اس ٹوٹے ہوئے دل کا کیا کریں ہم۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 10 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">10</div>
-                    <div class="urdu-text-layer">تیرے بغیر جینے کی عادت تو نہیں ہمیں،</div>
-                    <div class="urdu-text-layer">مگر تو نے مجبوریوں کا نام دے کر چھوڑ دیا۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 11 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">11</div>
-                    <div class="urdu-text-layer">ہنستے ہوئے چہروں کے پیچھے بہت سے غم ہوتے ہیں،</div>
-                    <div class="urdu-text-layer">ہر کوئی محفل میں بیٹھ کر رویا نہیں کرتا۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 12 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">12</div>
-                    <div class="urdu-text-layer">بڑی عجیب ہے یہ دنیا محبت کرنے والوں کی،</div>
-                    <div class="urdu-text-layer">وفا کرو تو سزا ملتی ہے، بے وفائی کرو تو لوگ پوجتے ہیں۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 13 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">13</div>
-                    <div class="urdu-text-layer">ہم نے سجدوں میں مانگا تھا جس کو،</div>
-                    <div class="urdu-text-layer">وہ کسی اور کی تقدیر کا حصہ بن گیا۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 14 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">14</div>
-                    <div class="urdu-text-layer">مل جائے جو آسانی سے وہ نعمت کیسی،</div>
-                    <div class="urdu-text-layer">تجھ کو پانے کی تڑپ نے ہمیں برباد کر دیا۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 15 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">15</div>
-                    <div class="urdu-text-layer">کہنے کو تو بہت اپنے ہوتے ہیں دنیا میں،</div>
-                    <div class="urdu-text-layer">جب وقت برا آئے تو کوئی سایہ بھی ساتھ نہیں دیتا۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 16 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">16</div>
-                    <div class="urdu-text-layer">ہم نے تو اپنی زندگی تیرے نام لکھی تھی،</div>
-                    <div class="urdu-text-layer">تم نے تو دو پل کی محبت کا صلہ بھی نہ دیا۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 17 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">17</div>
-                    <div class="urdu-text-layer">کاش وہ دن لوٹ آئیں جب ہم انجان تھے،</div>
-                    <div class="urdu-text-layer">نہ تجھ کو کھونے کا ڈر تھا نہ پانے کی چاہت۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 18 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">18</div>
-                    <div class="urdu-text-layer">اب تو راتوں کو جاگنا ہی مقدر بن گیا ہے،</div>
-                    <div class="urdu-text-layer">تیرے خواب جو سونے نہیں دیتے اور تیری یادیں جینے نہیں دیتیں۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 19 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">19</div>
-                    <div class="urdu-text-layer">لوگ کہتے ہیں کہ وقت کے ساتھ زخم بھر جاتے ہیں،</div>
-                    <div class="urdu-text-layer">مگر سچی محبت کے داغ کبھی مٹائے نہیں مٹتے۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 20 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">20</div>
-                    <div class="urdu-text-layer">تیری محفل سے اٹھے تھے تو کوئی غم نہ تھا،</div>
-                    <div class="urdu-text-layer">جب تنہائی ملی تو تیری کمی کا احساس ہوا۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 21 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">21</div>
-                    <div class="urdu-text-layer">تم کیا جانو گے اس دل کی بے بسی کا عالم،</div>
-                    <div class="urdu-text-layer">جو روز ٹوٹتا ہے صرف ایک تیری جھلک کے لیے۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 22 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">22</div>
-                    <div class="urdu-text-layer">ہم نے تو کانٹوں سے بھی وفا نبھائی ہے،</div>
-                    <div class="urdu-text-layer">تم تو پھول بن کر بھی ہمارے دامن کو زخمی کر گئے۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 23 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">23</div>
-                    <div class="urdu-text-layer">ایک عمر گزر گئی تجھے اپنا بناتے بناتے،</div>
-                    <div class="urdu-text-layer">اور تم نے ایک پل میں کہہ دیا کہ تم میرے کون ہو۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 24 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">24</div>
-                    <div class="urdu-text-layer">محبت تو اب بھی ہے تجھ سے بے پناہ،</div>
-                    <div class="urdu-text-layer">مگر اب تیری بے رخی کے سامنے سر جھکانا چھوڑ دیا۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 25 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">25</div>
-                    <div class="urdu-text-layer">اب نہ کوئی شکوہ ہے نہ کوئی شکایت ہے تم سے،</div>
-                    <div class="urdu-text-layer">بس ایک خاموشی ہے جو تماشا دیکھ رہی ہے۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 26 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">26</div>
-                    <div class="urdu-text-layer">تم خوش ہو اپنی دنیا میں تو کوئی بات نہیں،</div>
-                    <div class="urdu-text-layer">ہم بھی اپنی تنہائی کو گلے لگا کر سو جائیں گے۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 27 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">27</div>
-                    <div class="urdu-text-layer">تیری یادوں کے چراغ جلا کر بیٹھے ہیں،</div>
-                    <div class="urdu-text-layer">ہواؤں سے کہہ دو کہ آج اپنا رخ بدل لیں۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 28 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">28</div>
-                    <div class="urdu-text-layer">بہت شوق تھا ہمیں محبت کی وادیوں میں گھومنے کا،</div>
-                    <div class="urdu-text-layer">جب راستہ بھولے تو احساس ہوا کہ واپسی کا کوئی راستہ نہیں۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 29 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">29</div>
-                    <div class="urdu-text-layer">جس کے لیے ہم نے اپنی ساری خوشیاں قربان کر دیں،</div>
-                    <div class="urdu-text-layer">آج وہ ہمیں اپنی زندگی کا سب سے بڑا بوجھ سمجھتا ہے۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 30 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">30</div>
-                    <div class="urdu-text-layer">دل کی کتاب میں ہر ایک صفحہ تیرا ہی تھا،</div>
-                    <div class="urdu-text-layer">تم نے تو پوری کتاب ہی جلا کر راکھ کر دی۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 31 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">31</div>
-                    <div class="urdu-text-layer">چلو اب جانے بھی دو اس اداس کہانی کو،</div>
-                    <div class="urdu-text-layer">محبت میں تو اکثر لوگ برباد ہی ہوا کرتے ہیں۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 32 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">32</div>
-                    <div class="urdu-text-layer">تم نے تو ہمیں چھوڑ دیا کسی اور کے لیے،</div>
-                    <div class="urdu-text-layer">مگر یہ دل آج بھی تمہاری ہی دھڑکن پر چلتا ہے۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 33 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">33</div>
-                    <div class="urdu-text-layer">ایک جھوٹی امید پر زندہ ہیں ہم کب سے،</div>
-                    <div class="urdu-text-layer">کہ کبھی تو تمہیں اپنی خطاؤں کا احساس ہوگا۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 34 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">34</div>
-                    <div class="urdu-text-layer">تم تو کہتے تھے کہ جان بھی دے دیں گے تمہاری خاطر،</div>
-                    <div class="urdu-text-layer">آج ایک آنسو صاف کرنے بھی نہ آئے تم۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 35 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">35</div>
-                    <div class="urdu-text-layer">اب کس محفل میں جا کر سنائیں اپنا دکھ،</div>
-                    <div class="urdu-text-layer">یہاں تو ہر کوئی اپنے ہی غموں کا مارا ہوا ہے۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 36 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">36</div>
-                    <div class="urdu-text-layer">بڑی حسرت تھی کہ کوئی ہمیں بھی ٹوٹ کر چاہے،</div>
-                    <div class="urdu-text-layer">مگر یہاں تو ہر کوئی اپنے مطلب کے لیے ملتا ہے۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 37 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">37</div>
-                    <div class="urdu-text-layer">تیری تصویر کو سینے سے لگا کر سوتے ہیں،</div>
-                    <div class="urdu-text-layer">تاکہ خوابوں میں ہی سہی تیرا ساتھ میسر ہو۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 38 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">38</div>
-                    <div class="urdu-text-layer">ہم نے تو دل کے دروازے کھلے رکھے تھے تیرے لیے،</div>
-                    <div class="urdu-text-layer">تم نے تو قدم رکھنا بھی گوارا نہ کیا۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 39 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">39</div>
-                    <div class="urdu-text-layer">بدلتے ہوئے لوگوں کی بات نہ کرو ہم سے،</div>
-                    <div class="urdu-text-layer">ہم نے تو اپنے سائے کو بھی اندھیرے میں ساتھ چھوڑتے دیکھا ہے۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 40 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">40</div>
-                    <div class="urdu-text-layer">تیرے شہر سے گزرے تو پرانی یادیں تازہ ہو گئیں،</div>
-                    <div class="urdu-text-layer">وہی راستے تھے، وہی چہرے تھے، بس ایک تو نہ تھا۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 41 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">41</div>
-                    <div class="urdu-text-layer">اب تو پتھر بن چکا ہے یہ دل بھی شاید،</div>
-                    <div class="urdu-text-layer">اب کسی کے آنے یا جانے سے کوئی فرق نہیں پڑتا۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 42 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">42</div>
-                    <div class="urdu-text-layer">تم خوش رہو جہاں بھی رہو دعا ہے میری،</div>
-                    <div class="urdu-text-layer">ہم تو اپنی بربادی کا جشن تنہا ہی منا لیں گے۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 43 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">43</div>
-                    <div class="urdu-text-layer">بڑے مان سے ہارے تھے تم پر خود کو،</div>
-                    <div class="urdu-text-layer">تم نے تو ہار کا صلہ بھی تذلیل سے دیا۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 44 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">44</div>
-                    <div class="urdu-text-layer">ایک رات ایسی بھی آئے گی جب ہم سو جائیں گے،</div>
-                    <div class="urdu-text-layer">اور منانے والے رو رو کر ہمیں جگانے کی کوشش کریں گے۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 45 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">45</div>
-                    <div class="urdu-text-layer">تمہاری یادوں کا سحر کچھ ایسا ہے دل پر،</div>
-                    <div class="urdu-text-layer">کہ دنیا کی کوئی خوشی ہمیں اب اچھی نہیں لگتی۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 46 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">46</div>
-                    <div class="urdu-text-layer">ہم نے تو اپنی پلکوں پر سجایا تھا تم کو،</div>
-                    <div class="urdu-text-layer">تم نے تو خاک میں ملانے میں ایک پل بھی نہ لگایا۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 47 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">47</div>
-                    <div class="urdu-text-layer">کاش تم سمجھ سکتے اس دل کی پکار کو،</div>
-                    <div class="urdu-text-layer">جو صرف اور صرف تمہارا نام لیتا ہے ہر دھڑکن کے ساتھ۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 48 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">48</div>
-                    <div class="urdu-text-layer">اب نہ کوئی امید ہے نہ کوئی تمنا ہے دل میں،</div>
-                    <div class="urdu-text-layer">ایک خالی مکان ہے جس میں اداسی کا ڈیرا ہے۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 49 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">49</div>
-                    <div class="urdu-text-layer">تم نے تو کھیل سمجھا تھا ہماری محبت کو،</div>
-                    <div class="urdu-text-layer">ہم تو اپنی زندگی ہی ہار بیٹھے اس کھیل میں۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 50 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">50</div>
-                    <div class="urdu-text-layer">چلو اب ختم ہوا داستانِ عشق کا سفر،</div>
-                    <div class="urdu-text-layer">تم اپنے راستے چلو اور ہم اپنی تنہائی کے مسافر۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 51 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">51</div>
-                    <div class="urdu-text-layer">وہ سمجھے ہی نہیں میری خاموشی کا مطلب،</div>
-                    <div class="urdu-text-layer">میں نے تو سب کچھ ہار کر بھی ان کا بھلا چاہا۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 52 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">52</div>
-                    <div class="urdu-text-layer">اس درد کی دنیا سے دور چلے جانا ہی بہتر ہے،</div>
-                    <div class="urdu-text-layer">جہاں کوئی دل کی بات سمجھنے والا ہی نہ ہو۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 53 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">53</div>
-                    <div class="urdu-text-layer">تم نے جو زخم دیے ہیں وہ گہرے بہت ہیں،</div>
-                    <div class="urdu-text-layer">مگر ہم نے بھی مسکرا کر سہنے کی قسم کھائی ہے۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 54 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">54</div>
-                    <div class="urdu-text-layer">اب کوئی اور تمنا نہیں ہے اس ٹوٹے ہوئے دل میں،</div>
-                    <div class="urdu-text-layer">بس ایک آخری سانس ہو اور تیرا نام لبوں پر ہو۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 55 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">55</div>
-                    <div class="urdu-text-layer">لوگوں نے تو صرف میرا چہرہ دیکھا ہے ہنستا ہوا،</div>
-                    <div class="urdu-text-layer">میرے دل کا کرب تو صرف میرا خدا جانتا ہے۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 56 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">56</div>
-                    <div class="urdu-text-layer">محبت کا دعویٰ کرنے والے بہت ملیں گے تمہیں،</div>
-                    <div class="urdu-text-layer">مگر یاد رکھنا ہماری جیسی وفا کہیں تلاش نہ کر پاؤ گے۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 57 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">57</div>
-                    <div class="urdu-text-layer">تیرے بنا زندگی کا کوئی رنگ نہیں ہے اب،</div>
-                    <div class="urdu-text-layer">ہر طرف ایک دھند ہے اور اداسی کا سایہ ہے۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 58 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">58</div>
-                    <div class="urdu-text-layer">ہم نے تو شیشے کے محل بنائے تھے محبت کے،</div>
-                    <div class="urdu-text-layer">تم نے تو ایک ہی پتھر میں چکنا چور کر دیا۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 59 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">59</div>
-                    <div class="urdu-text-layer">چلو اب الوداع کہتے ہیں اس اداس رات کو،</div>
-                    <div class="urdu-text-layer">شاید کل کا سورج ہمارے لیے کوئی نئی امید لے کر آئے۔</div>
-                </div>
-
-                <!-- Poetry Entry Card 60 -->
-                <div class="poetry-data-node">
-                    <div class="node-index-flag">60</div>
-                    <div class="urdu-text-layer">ختم ہوا اب ہماری وفاداری کا قصہ بھی،</div>
-                    <div class="urdu-text-layer">اب ہم بھی بدل جائیں گے تمہاری ہی طرح بالکل۔</div>
-                </div>
+            <div class="footer-social-wrapper">
+                <a href="https://www.tiktok.com/@pakpattan321" target="_blank" class="social-icon-anchor">TIKTOK: @maliknafay321</a>
+                <a href="https://www.instagram.com/pakpattan321" target="_blank" class="social-icon-anchor">INSTAGRAM: @pakpattan321</a>
             </div>
         </section>
 
-        <!-- Interactive System Forms Sub-Grid Mapping -->
-        <section class="system-interaction-container">
-            <!-- Share Any Write Component Area -->
-            <div id="shareSection" class="interaction-card-block">
-                <h3>SHARE ANY WRITE</h3>
-                <form action="#" method="POST" onsubmit="event.preventDefault();">
-                    <div class="input-group-pipeline">
-                        <label>Your Name / Pseudonym</label>
-                        <input type="text" placeholder="Enter your official handle..." required>
-                    </div>
-                    <div class="input-group-pipeline">
-                        <label>Your Poetry / Content Lines</label>
-                        <textarea rows="4" placeholder="Write your custom verse layer here..." required></textarea>
-                    </div>
-                    <button type="submit" class="submit-portal-btn">SUBMIT TO REPOSITORY</button>
-                </form>
+        <!-- Dynamic Category Filtering Matrix Layout -->
+        <div class="filter-matrix-row">
+            <button class="filter-btn active-category" onclick="filterDataMatrix('all')">ALL SHERS</button>
+            <button class="filter-btn" onclick="filterDataMatrix('attitude')">ATTITUDE</button>
+            <button class="filter-btn" onclick="filterDataMatrix('onesided')">ONE SIDED LOVE</button>
+            <button class="filter-btn" onclick="filterDataMatrix('love')">LOVE</button>
+            <button class="filter-btn" onclick="filterDataMatrix('success')">SUCCESS</button>
+            <button class="filter-btn" onclick="filterDataMatrix('sad')">SAD</button>
+            <button class="filter-btn" onclick="filterDataMatrix('motivation')">MOTIVATION</button>
+            <button class="filter-btn" onclick="filterDataMatrix('maa')">MAA</button>
+            <button class="filter-btn" onclick="filterDataMatrix('raatein')">RAATEIN</button>
+            <button class="filter-btn" onclick="filterDataMatrix('waqt')">TIME / WAQT</button>
+            <button class="filter-btn" onclick="filterDataMatrix('dost')">FRIENDS / DOST</button>
+            <button class="filter-btn" onclick="filterDataMatrix('mixname')">MIXED (NAFAY)</button>
+        </div>
+
+        <!-- Poetry Core Multi-Grid Pipeline (Contains Exactly 110 Verified Entries) -->
+        <section id="poetryGrid" class="poetry-grid-pipeline">
+            
+            <!-- Category 1: Attitude Poetry (10 Cards) -->
+            <div class="poetry-card-node" data-category="attitude">
+                <div class="card-meta-tag">ATTITUDE POETRY - 01</div>
+                <p class="urdu-poetry-content-line">ہمارا نام سن کر لوگ راستہ بدل لیتے ہیں،<br>ہم دلوں پر نہیں قسمتوں پر راج کرتے ہیں۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="attitude">
+                <div class="card-meta-tag">ATTITUDE POETRY - 02</div>
+                <p class="urdu-poetry-content-line">جھکنا منظور نہیں ہمیں کسی کے سامنے،<br>ہم اپنے اصولوں کے خود بادشاہ ہیں۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="attitude">
+                <div class="card-meta-tag">ATTITUDE POETRY - 03</div>
+                <p class="urdu-poetry-content-line">برابری ہمارے ساتھ تو خواب ہے تیرا،<br>ہم وہاں کھڑے ہوتے ہیں جہاں کوئی پہنچ نہیں سکتا۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="attitude">
+                <div class="card-meta-tag">ATTITUDE POETRY - 04</div>
+                <p class="urdu-poetry-content-line">لہجے میں تلخی لازمی ہے میرے صاحب،<br>لوگوں کو اوقات یاد دلانے کے کام آتی ہے۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="attitude">
+                <div class="card-meta-tag">ATTITUDE POETRY - 05</div>
+                <p class="urdu-poetry-content-line">ہم سے الجھنے کی کوشش بھی مت کرنا،<br>ہم رخ بدل دیتے ہیں طوفانوں کا۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="attitude">
+                <div class="card-meta-tag">ATTITUDE POETRY - 06</div>
+                <p class="urdu-poetry-content-line">پہچان بتانا ہماری عادت نہیں صاحب،<br>لوگ چہرہ دیکھ کر ہی سلام ٹھوکتے ہیں۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="attitude">
+                <div class="card-meta-tag">ATTITUDE POETRY - 07</div>
+                <p class="urdu-poetry-content-line">نرم مزاج ضرور ہیں مگر یاد رکھنا،<br>شکار کرنا ہم ابھی بھولے نہیں ہیں۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="attitude">
+                <div class="card-meta-tag">ATTITUDE POETRY - 08</div>
+                <p class="urdu-poetry-content-line">اکڑ تو چھوٹے لوگ دکھاتے ہیں جناب،<br>ہم تو سیدھا لوگوں کو دلوں سے نکالتے ہیں۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="attitude">
+                <div class="card-meta-tag">ATTITUDE POETRY - 09</div>
+                <p class="urdu-poetry-content-line">تمہاری اوقات سے زیادہ چرچے ہیں ہمارے،<br>ابھی تو صرف شروعات ہے آگے آگے دیکھو۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="attitude">
+                <div class="card-meta-tag">ATTITUDE POETRY - 10</div>
+                <p class="urdu-poetry-content-line">بادشاہت پیسوں سے نہیں جگر سے ہوتی ہے،<br>اور جگر ہمارا بچپن سے ہی بڑا ہے۔ (نافع)</p>
             </div>
 
-            <!-- Contact Support Pipeline Matrix -->
-            <div id="contactSection" class="interaction-card-block">
-                <h3>CONTACT CORE TEAM</h3>
-                <form action="#" method="POST" onsubmit="event.preventDefault();">
-                    <div class="input-group-pipeline">
-                        <label>Identity Email Address</label>
-                        <input type="email" placeholder="name@domain.com" required>
-                    </div>
-                    <div class="input-group-pipeline">
-                        <label>Operational Query Message</label>
-                        <textarea rows="4" placeholder="Describe the structural feedback or system help required..." required></textarea>
-                    </div>
-                    <button type="submit" class="submit-portal-btn">DISPATCH LINE DATA</button>
-                </form>
+            <!-- Category 2: One Sided Love (10 Cards) -->
+            <div class="poetry-card-node" data-category="onesided">
+                <div class="card-meta-tag">ONE SIDED LOVE - 01</div>
+                <p class="urdu-poetry-content-line">تمہیں خبر ہی نہیں، کوئی تم پر مرتا ہے،<br>دور سے دیکھ کر تجھے یہ دل آہیں بھرتا ہے۔ (نافع)</p>
             </div>
+            <div class="poetry-card-node" data-category="onesided">
+                <div class="card-meta-tag">ONE SIDED LOVE - 02</div>
+                <p class="urdu-poetry-content-line">میری محبت کا حق بس مجھ تک ہی رہنے دو،<br>تمہیں پانا مقدر میں نہ سہی، چاہنا تو حق ہے میرا۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="onesided">
+                <div class="card-meta-tag">ONE SIDED LOVE - 03</div>
+                <p class="urdu-poetry-content-line">تم کسی اور کی محفل کا چراغ بنتے جاؤ،<br>ہم اندھیرے میں بیٹھ کر تمہاری سلامتی مانگیں گے۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="onesided">
+                <div class="card-meta-tag">ONE SIDED LOVE - 04</div>
+                <p class="urdu-poetry-content-line">ایک طرفہ محبت کا سکون ہی کچھ اور ہے،<br>نہ روٹھنے کا ڈر ہوتا ہے نہ منانے کی فکر۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="onesided">
+                <div class="card-meta-tag">ONE SIDED LOVE - 05</div>
+                <p class="urdu-poetry-content-line">تمہاری ایک مسکراہٹ پر یہ جگر ہار بیٹھے ہیں،<br>اور تم کہتے ہو کہ ہم تمہارے کون ہوتے ہیں۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="onesided">
+                <div class="card-meta-tag">ONE SIDED LOVE - 06</div>
+                <p class="urdu-poetry-content-line">تمہارے راستے پر آنکھیں بچھائے بیٹھے ہیں،<br>جانتے ہیں تم نہیں آؤ گے پھر بھی آس لگائے بیٹھے ہیں۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="onesided">
+                <div class="card-meta-tag">ONE SIDED LOVE - 07</div>
+                <p class="urdu-poetry-content-line">کیوں کروں شکوہ میں تمہاری بے رخی کا،<br>میری محبت تو صرف میری ہی رضا ہے۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="onesided">
+                <div class="card-meta-tag">ONE SIDED LOVE - 08</div>
+                <p class="urdu-poetry-content-line">تم پاس سے گزر جاؤ تو عید ہوتی ہے،<br>نہ دیکھو تو زندگی بس اک امید ہوتی ہے۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="onesided">
+                <div class="card-meta-tag">ONE SIDED LOVE - 09</div>
+                <p class="urdu-poetry-content-line">دل کی بات دل میں رکھنا سیکھ لیا ہے ہم نے،<br>تیرے انکار کے خوف سے خاموش رہنا سیکھ لیا ہے۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="onesided">
+                <div class="card-meta-tag">ONE SIDED LOVE - 10</div>
+                <p class="urdu-poetry-content-line">ایک طرفہ پیار کا درد صرف وہی جانتا ہے،<br>جو روز جلی ہوئی شمع پر خود کو مٹاتا ہے۔ (نافع)</p>
+            </div>
+
+            <!-- Category 3: Love (10 Cards) -->
+            <div class="poetry-card-node" data-category="love">
+                <div class="card-meta-tag">LOVE POETRY - 01</div>
+                <p class="urdu-poetry-content-line">تیرے لمس کا جادو ہے کہ دل دھڑکتا ہی جا رہا ہے،<br>جیسے سارا جہاں ہماری محبت پر گواہی دے رہا ہے۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="love">
+                <div class="card-meta-tag">LOVE POETRY - 02</div>
+                <p class="urdu-poetry-content-line">میری ہر سانس میں نام صرف تمہارا ہی ہے،<br>تم مل جاؤ تو لگے کائنات مل گئی ہے۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="love">
+                <div class="card-meta-tag">LOVE POETRY - 03</div>
+                <p class="urdu-poetry-content-line">تمہاری آنکھوں کی جھیل میں ڈوب جانے دو،<br>زندگی جینے کا یہ انداز اب اچھا لگتا ہے۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="love">
+                <div class="card-meta-tag">LOVE POETRY - 04</div>
+                <p class="urdu-poetry-content-line">محبت کا کوئی رنگ نہیں ہوتا صاحب،<br>مگر جب تم سامنے آؤ تو کائنات رنگین لگتی ہے۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="love">
+                <div class="card-meta-tag">LOVE POETRY - 05</div>
+                <p class="urdu-poetry-content-line">دل کا سودا تو ایک ہی بار کیا تھا ہم نے،<br>اب جان بھی جائے تو مکرنا ہمارے بس میں نہیں۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="love">
+                <div class="card-meta-tag">LOVE POETRY - 06</div>
+                <p class="urdu-poetry-content-line">تم ساتھ ہو تو ہر راستہ آسان لگتا ہے،<br>تیرے بغیر تو یہ سارا جہان سنسان لگتا ہے۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="love">
+                <div class="card-meta-tag">LOVE POETRY - 07</div>
+                <p class="urdu-poetry-content-line">تیری مسکراہٹ پر اپنی زندگی وار دوں گا،<br>تم کہو تو صحیح، موت کو بھی ٹال دوں گا۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="love">
+                <div class="card-meta-tag">LOVE POETRY - 08</div>
+                <p class="urdu-poetry-content-line">محبت تم سے ہے اور بے پناہ ہے جانی،<br>اب اس داستان کا انجام کچھ بھی ہو پرواہ نہیں۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="love">
+                <div class="card-meta-tag">LOVE POETRY - 09</div>
+                <p class="urdu-poetry-content-line">تم پنہاں ہو میری روح کے اندر اس طرح،<br>کہ ہر دھڑکن سے تیری خوشبو آتی ہے۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="love">
+                <div class="card-meta-tag">LOVE POETRY - 10</div>
+                <p class="urdu-poetry-content-line">خدا سے مانگا ہے بس اک عمر کا ساتھ تیرا،<br>باقی دنیا کی کوئی نعمت درکار نہیں ہمیں ۔ (نافع)</p>
+            </div>
+
+            <!-- Category 4: Success (10 Cards) -->
+            <div class="poetry-card-node" data-category="success">
+                <div class="card-meta-tag">SUCCESS POETRY - 01</div>
+                <p class="urdu-poetry-content-line">ہمیں ہرانے کا خواب دیکھنے والے دیکھ لیں،<br>ہم گر کر بھی کھڑے ہونا اچھے سے جانتے ہیں۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="success">
+                <div class="card-meta-tag">SUCCESS POETRY - 02</div>
+                <p class="urdu-poetry-content-line">منزلیں ان کو ہی ملتی ہیں جن کے ارادوں میں جان ہوتی ہے،<br>صرف پروں سے کچھ نہیں ہوتا، حوصلوں سے اڑان ہوتی ہے۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="success">
+                <div class="card-meta-tag">SUCCESS POETRY - 03</div>
+                <p class="urdu-poetry-content-line">ہم نے محنت کا ایسا طوفان کھڑا کیا ہے،<br>کہ قسمت کو بھی ہمارے سامنے سر جھکانا پڑا۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="success">
+                <div class="card-meta-tag">SUCCESS POETRY - 04</div>
+                <p class="urdu-poetry-content-line">کامیابی کا شور خود مچ جائے گا بازار میں،<br>تم بس خاموشی سے محنت کے جال بچھاتے جاؤ۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="success">
+                <div class="card-meta-tag">SUCCESS POETRY - 05</div>
+                <p class="urdu-poetry-content-line">رکاوٹیں تو بہت آئیں گی راستے میں مگر،<br>ہم نے رکنے کا نام کبھی اپنی ڈکشنری میں نہیں رکھا۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="success">
+                <div class="card-meta-tag">SUCCESS POETRY - 06</div>
+                <p class="urdu-poetry-content-line">ستارے بکھیر دیں گے تمہاری راہوں میں،<br>تم بس اپنی کامیابی کی ضد پر قائم رہو۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="success">
+                <div class="card-meta-tag">SUCCESS POETRY - 07</div>
+                <p class="urdu-poetry-content-line">لوگوں کے طعنے ہی میری کامیابی کا ایندھن بنے،<br>آج وہی لوگ میرے سائے تلے بیٹھنے کو ترستے ہیں۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="success">
+                <div class="card-meta-tag">SUCCESS POETRY - 08</div>
+                <p class="urdu-poetry-content-line">مقام وہ حاصل کرنا ہے کہ کائنات دیکھتی رہ جائے،<br>ابھی تو صرف شروعات کا سورج ابھرا ہے۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="success">
+                <div class="card-meta-tag">SUCCESS POETRY - 09</div>
+                <p class="urdu-poetry-content-line">ناکامیاں تو بس ایک سبق تھیں میرے لیے،<br>اصل جیت کا تاج تو اب میرے سر پر سجے گا۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="success">
+                <div class="card-meta-tag">SUCCESS POETRY - 10</div>
+                <p class="urdu-poetry-content-line">اپنے نام کا سکہ ایسا چلائیں گے اس دنیا میں،<br>کہ لوگ مرتے دم تک ہمارا احترام کریں گے۔ (نافع)</p>
+            </div>
+
+            <!-- Category 5: Sad (10 Cards) -->
+            <div class="poetry-card-node" data-category="sad">
+                <div class="card-meta-tag">SAD POETRY - 01</div>
+                <p class="urdu-poetry-content-line">دل کے ٹوٹنے کا درد صرف وہی سمجھتا ہے،<br>جو ہنستے ہوئے چہرے کے پیچھے آنسو چھپاتا ہے۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="sad">
+                <div class="card-meta-tag">SAD POETRY - 02</div>
+                <p class="urdu-poetry-content-line">بہت اکیلے ہو گئے ہیں ہم اس بھرے جہان میں،<br>کوئی دل کا حال پوچھنے والا بھی نہیں بچا۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="sad">
+                <div class="card-meta-tag">SAD POETRY - 03</div>
+                <p class="urdu-poetry-content-line">جس پر سب سے زیادہ اعتبار تھا ہمیں،<br>اسی نے سب سے پہلے ہمیں تنہا چھوڑ دیا۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="sad">
+                <div class="card-meta-tag">SAD POETRY - 04</div>
+                <p class="urdu-poetry-content-line">چلو اب جانے بھی دو اس محبت کی کہانی کو،<br>ہم برباد تھے اور برباد ہی اچھے ہیں۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="sad">
+                <div class="card-meta-tag">SAD POETRY - 05</div>
+                <p class="urdu-poetry-content-line">زخم اتنے گہرے ہیں کہ دکھائے بھی نہیں جاتے،<br>اور درد ایسا ہے کہ اب چھپایا بھی نہیں جاتا۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="sad">
+                <div class="card-meta-tag">SAD POETRY - 06</div>
+                <p class="urdu-poetry-content-line">تیری محفل سے اٹھے تھے تو کوئی غم نہ تھا،<br>جب تنہائی نے گلے لگایا تو رونا آ گیا۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="sad">
+                <div class="card-meta-tag">SAD POETRY - 07</div>
+                <p class="urdu-poetry-content-line">امیدیں مٹ گئیں، خواب چکنا چور ہو گئے،<br>ہم تیرے عشق میں جیتے جی لاش ہو گئے۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="sad">
+                <div class="card-meta-tag">SAD POETRY - 08</div>
+                <p class="urdu-poetry-content-line">کوئی نہیں دیکھتا دل کے اندر کی ویرانی کو،<br>سب اوپر کا ہنستا چہرہ دیکھ کر فیصلہ کر لیتے ہیں۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="sad">
+                <div class="card-meta-tag">SAD POETRY - 09</div>
+                <p class="urdu-poetry-content-line">اب تو موت کا ہی انتظار ہے اس دل کو،<br>زندگی نے تو ہر قدم پر صرف تماشا دکھایا ہے۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="sad">
+                <div class="card-meta-tag">SAD POETRY - 10</div>
+                <p class="urdu-poetry-content-line">خاموشی ہی بہتر ہے اب ہر بات کے لیے،<br>الفاظ تو یہاں لوگ مطلب کے لیے استعمال کرتے ہیں۔ (نافع)</p>
+            </div>
+
+            <!-- Category 6: Motivation (10 Cards) -->
+            <div class="poetry-card-node" data-category="motivation">
+                <div class="card-meta-tag">MOTIVATION POETRY - 01</div>
+                <p class="urdu-poetry-content-line">اٹھو اور جنگ کا اعلان کرو اپنی تقدیر سے،<br>کب تک دوسروں کے فیصلوں پر روتے رہو گے۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="motivation">
+                <div class="card-meta-tag">MOTIVATION POETRY - 02</div>
+                <p class="urdu-poetry-content-line">طوفان بھی تھم جاتے ہیں جب حوصلے بلند ہوں،<br>تم بس اپنے قدم آگے بڑھانے کی ٹھان لو۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="motivation">
+                <div class="card-meta-tag">MOTIVATION POETRY - 03</div>
+                <p class="urdu-poetry-content-line">اندھیرا کتنا ہی گہرا ہو، صبح ضرور ہوتی ہے،<br>صبر کا دامن نہ چھوڑنا، فتح تمہاری ہی ہے۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="motivation">
+                <div class="card-meta-tag">MOTIVATION POETRY - 04</div>
+                <p class="urdu-poetry-content-line">مشکلیں تو بس امتحان ہیں تمہاری طاقت کا،<br>ان سے ڈرنا نہیں بلکہ ان کو پامال کرنا ہے۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="motivation">
+                <div class="card-meta-tag">MOTIVATION POETRY - 05</div>
+                <p class="urdu-poetry-content-line">خواب بڑے ہیں تو محنت کا دائرہ بھی بڑا کرو،<br>دو پل کی سستی سے منزلیں نہیں ملا کرتیں۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="motivation">
+                <div class="card-meta-tag">MOTIVATION POETRY - 06</div>
+                <p class="urdu-poetry-content-line">جیتنے کا جذبہ دل میں ہو تو کوئی طاقت،<br>تمہیں اپنی جگہ سے ہلا نہیں سکتی۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="motivation">
+                <div class="card-meta-tag">MOTIVATION POETRY - 07</div>
+                <p class="urdu-poetry-content-line">اپنی تقدیر خود لکھنا سیکھو میرے بھائی،<br>دوسروں کے لکھے پر تو صرف مٹی ملتی ہے۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="motivation">
+                <div class="card-meta-tag">MOTIVATION POETRY - 08</div>
+                <p class="urdu-poetry-content-line">گرنا کامیابی کا حصہ ہے، رکنا ناکامی ہے،<br>ہر بار گر کر دگنی طاقت سے کھڑے ہو جاؤ۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="motivation">
+                <div class="card-meta-tag">MOTIVATION POETRY - 09</div>
+                <p class="urdu-poetry-content-line">آسمان کو جھکانے کی قوت ہے تیرے بازوؤں میں،<br>بس ایک بار اپنے اندر کے شیر کو بیدار کرو۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="motivation">
+                <div class="card-meta-tag">MOTIVATION POETRY - 10</div>
+                <p class="urdu-poetry-content-line">دنیا کہتی ہے تم نہیں کر سکتے، دل کہتا ہے،<br>تم ہی ہو جو اس تاریخ کو بدل سکتے ہو۔ (نافع)</p>
+            </div>
+
+            <!-- Category 7: Maa (10 Cards) -->
+            <div class="poetry-card-node" data-category="maa">
+                <div class="card-meta-tag">MAA POETRY - 01</div>
+                <p class="urdu-poetry-content-line">میری ماں کی دعاؤں کا اثر ہے مجھ پر،<br>کہ مصیبتیں آ کر بھی میرا راستہ بدل لیتی ہیں۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="maa">
+                <div class="card-meta-tag">MAA POETRY - 02</div>
+                <p class="urdu-poetry-content-line">جنت کا سکون ہے ماں کے قدموں تلے،<br>ساری دنیا کی خوشیاں ایک طرف، ماں کا پیار ایک طرف۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="maa">
+                <div class="card-meta-tag">MAA POETRY - 03</div>
+                <p class="urdu-poetry-content-line">جب بھی ٹوٹتا ہوں تو ماں گلے لگا لیتی ہے،<br>میرا سارا دکھ سیکنڈوں میں مٹا دیتی ہے۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="maa">
+                <div class="card-meta-tag">MAA POETRY - 04</div>
+                <p class="urdu-poetry-content-line">ماں کی چادر کا سایہ ہی میری ڈھال ہے،<br>باقی یہ زمانہ تو صرف کانٹے بچھانے والا ہے۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="maa">
+                <div class="card-meta-tag">MAA POETRY - 05</div>
+                <p class="urdu-poetry-content-line">ماں کے چہرے کی مسکراہٹ ہی میری کامیابی ہے،<br>ان کی آنکھوں میں آنسو دیکھنا گوارا نہیں مجھے۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="maa">
+                <div class="card-meta-tag">MAA POETRY - 06</div>
+                <p class="urdu-poetry-content-line">ساری دنیا مطلب کے لیے رشتوں کا جال بنتی ہے،<br>ایک ماں ہی ہے جو بے غرض پیار کرتی ہے۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="maa">
+                <div class="card-meta-tag">MAA POETRY - 07</div>
+                <p class="urdu-poetry-content-line">خدا کا دوسرا روپ ہے ماں زمین پر،<br>جس نے ماں کو دکھ دیا اس کا کوئی ٹھکانہ نہیں۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="maa">
+                <div class="card-meta-tag">MAA POETRY - 08</div>
+                <p class="urdu-poetry-content-line">ماں کی لوری میں جو سکون تھا وہ اب کہاں،<br>اب تو راتیں صرف جاگ کر گزرا کرتی ہیں۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="maa">
+                <div class="card-meta-tag">MAA POETRY - 09</div>
+                <p class="urdu-poetry-content-line">میری کامیابی کی وجہ ہی میری ماں ہے،<br>ان کے بنا میری ہستی کا کوئی نام نہ تھا۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="maa">
+                <div class="card-meta-tag">MAA POETRY - 10</div>
+                <p class="urdu-poetry-content-line">سلامت رکھے خدا میری ماں کو ہمیشہ،<br>ان کے دم سے ہی میرے گھر کی رونق ہے۔ (نافع)</p>
+            </div>
+
+            <!-- Category 8: Raatein (10 Cards) -->
+            <div class="poetry-card-node" data-category="raatein">
+                <div class="card-meta-tag">RAATEIN POETRY - 01</div>
+                <p class="urdu-poetry-content-line">یہ اداس راتیں اور تیری یادوں کا موسم،<br>ہمیں سونے نہیں دیتا یہ تنہائی کا عالم۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="raatein">
+                <div class="card-meta-tag">RAATEIN POETRY - 02</div>
+                <p class="urdu-poetry-content-line">رات کا اندھیرا گواہ ہے میری بے بسی کا،<br>جب سارا جہاں سوتا ہے تو یہ دل روتا ہے۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="raatein">
+                <div class="card-meta-tag">RAATEIN POETRY - 03</div>
+                <p class="urdu-poetry-content-line">تاروں سے باتیں کرتے کرتے صبح ہو جاتی ہے،<br>تیرے بنا اب رات کی نیند جیسے کھو گئی ہے۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="raatein">
+                <div class="card-meta-tag">RAATEIN POETRY - 04</div>
+                <p class="urdu-poetry-content-line">چاند بھی اداس ہے آج میری طرح بلندی پر،<br>اسے بھی کوئی چاہنے والا شاید ملا نہیں ہے۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="raatein">
+                <div class="card-meta-tag">RAATEIN POETRY - 05</div>
+                <p class="urdu-poetry-content-line">رات کے سناٹے میں تیری آواز سنائی دیتی ہے،<br>یہ میرا وہم ہے یا میری دیوانگی کی حد۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="raatein">
+                <div class="card-meta-tag">RAATEIN POETRY - 06</div>
+                <p class="urdu-poetry-content-line">سرد راتوں کی تنہائی ماریل ہوتی ہے صاحب،<br>یہاں اچھے اچھے جگر والے بھی ٹوٹ جاتے ہیں۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="raatein">
+                <div class="card-meta-tag">RAATEIN POETRY - 07</div>
+                <p class="urdu-poetry-content-line">خوابوں کی بستی اجڑ گئی جب سے ہوش آیا،<br>اب راتیں صرف جاگنے کے کام آتی ہیں۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="raatein">
+                <div class="card-meta-tag">RAATEIN POETRY - 08</div>
+                <p class="urdu-poetry-content-line">تکیہ آنسوؤں سے بھیگ جاتا ہے روز میرا،<br>کسی کو پرواہ نہیں میرے اس کرب کی یہاں۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="raatein">
+                <div class="card-meta-tag">RAATEIN POETRY - 09</div>
+                <p class="urdu-poetry-content-line">اندھیری رات کا مسافر ہوں کوئی منزل نہیں میری،<br>بس چلتا جا رہا ہوں وقت کے اشاروں پر۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="raatein">
+                <div class="card-meta-tag">RAATEIN POETRY - 10</div>
+                <p class="urdu-poetry-content-line">رات ختم ہو جاتی ہے مگر قصہ ختم نہیں ہوتا،<br>تیرے عشق کا صلہ اب راتوں کا جاگنا ٹھہرا۔ (نافع)</p>
+            </div>
+
+            <!-- Category 9: Time / Waqt (10 Cards) -->
+            <div class="poetry-card-node" data-category="waqt">
+                <div class="card-meta-tag">TIME POETRY - 01</div>
+                <p class="urdu-poetry-content-line">وقت بدلتا ہے تو چہرے بھی بدل جاتے ہیں،<br>جو کبھی اپنے تھے وہ انجان بن جاتے ہیں۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="waqt">
+                <div class="card-meta-tag">TIME POETRY - 02</div>
+                <p class="urdu-poetry-content-line">برے وقت نے ہی سکھایا ہے جینے کا ہنر،<br>اچھے وقت میں تو لوگ صرف تماشا دیکھتے ہیں۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="waqt">
+                <div class="card-meta-tag">TIME POETRY - 03</div>
+                <p class="urdu-poetry-content-line">وقت کی گردش سے ڈرتے نہیں ہیں باہم،<br>ہم نے ہر دور میں اپنا سکہ چلایا ہے۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="waqt">
+                <div class="card-meta-tag">TIME POETRY - 04</div>
+                <p class="urdu-poetry-content-line">صبر کرو صاحب ابھی ہمارا وقت نہیں آیا،<br>جب آئے گا تو دور بھی صرف ہمارا ہی ہوگا۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="waqt">
+                <div class="card-meta-tag">TIME POETRY - 05</div>
+                <p class="urdu-poetry-content-line">گزرے ہوئے وقت کی باتیں اب نہ کرو ہم سے،<br>ہم نے حال میں جینا اچھے سے سیکھ لیا ہے۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="waqt">
+                <div class="card-meta-tag">TIME POETRY - 06</div>
+                <p class="urdu-poetry-content-line">وقت سب کا حساب برابر کرتا ہے ایک دن،<br>آج تمہارا دن ہے کل ہمارا بھی دور آئے گا۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="waqt">
+                <div class="card-meta-tag">TIME POETRY - 07</div>
+                <p class="urdu-poetry-content-line">دو پل کی زندگی میں وقت ضائع مت کرو،<br>نفرتوں کو مٹاؤ اور اپنے نام کے جھنڈے گاڑو۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="waqt">
+                <div class="card-meta-tag">TIME POETRY - 08</div>
+                <p class="urdu-poetry-content-line">پیسہ تو کمانا آسان ہے مگر گزرا ہوا وقت،<br>کوئی واپس نہیں لا سکتا چاہے کتنا ہی امیر ہو۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="waqt">
+                <div class="card-meta-tag">TIME POETRY - 09</div>
+                <p class="urdu-poetry-content-line">بدلتے ہوئے وقت کے ساتھ ہم نے بھی خود کو بدلا،<br>اب ہم کسی کے فریب میں نہیں آنے والے۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="waqt">
+                <div class="card-meta-tag">TIME POETRY - 10</div>
+                <p class="urdu-poetry-content-line">وقت کی نبض کو پہچاننا ہی اصل ہنر ہے،<br>جو وقت کی قدر نہیں کرتا وہ خاک میں ملتا ہے۔ (نافع)</p>
+            </div>
+
+            <!-- Category 10: Friends / Dost (10 Cards) -->
+            <div class="poetry-card-node" data-category="dost">
+                <div class="card-meta-tag">FRIENDS POETRY - 01</div>
+                <p class="urdu-poetry-content-line">یاروں کی یاری پر جان بھی قربان ہے ہماری،<br>دشمنوں کی کیا اوقات جو ہماری دوستی توڑیں۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="dost">
+                <div class="card-meta-tag">FRIENDS POETRY - 02</div>
+                <p class="urdu-poetry-content-line">سچے دوست قسمت والوں کو ملا کرتے ہیں،<br>یہاں ہر کوئی مطلب کے لیے ہاتھ بڑھاتا ہے۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="dost">
+                <div class="card-meta-tag">FRIENDS POETRY - 03</div>
+                <p class="urdu-poetry-content-line">محفل جمتی ہے تو صرف یاروں کے دم سے،<br>تیرے بنا تو یہ زندگی ادھوری لگتی ہے بھائی۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="dost">
+                <div class="card-meta-tag">FRIENDS POETRY - 04</div>
+                <p class="urdu-poetry-content-line">دوستی میں غداری کرنے والوں کو ہم،<br>سیدھا قبرستان کا راستہ دکھاتے ہیں۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="dost">
+                <div class="card-meta-tag">FRIENDS POETRY - 05</div>
+                <p class="urdu-poetry-content-line">میرے دوست ہی میری اصل طاقت ہیں دنیا میں،<br>جب ساتھ کھڑے ہوں تو طوفان بھی راستہ بدلتے ہیں۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="dost">
+                <div class="card-meta-tag">FRIENDS POETRY - 06</div>
+                <p class="urdu-poetry-content-line">سچی دوستی کا کوئی نعم البدل نہیں ہوتا،<br>یہ وہ رشتہ ہے جو دل سے نبھایا جاتا ہے۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="dost">
+                <div class="card-meta-tag">FRIENDS POETRY - 07</div>
+                <p class="urdu-poetry-content-line">ہم نے یاری میں کبھی غداری نہیں کی صاحب،<br>جان دے دی مگر یار کا ساتھ نہیں چھوڑا۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="dost">
+                <div class="card-meta-tag">FRIENDS POETRY - 08</div>
+                <p class="urdu-poetry-content-line">دشمن بھی کانپتے ہیں ہماری یاری کا اتحاد دیکھ کر،<br>ہم وہ ہیں جو موت کے منہ سے بھی یار کو نکال لائیں۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="dost">
+                <div class="card-meta-tag">FRIENDS POETRY - 09</div>
+                <p class="urdu-poetry-content-line">برے وقت میں جو ساتھ کھڑا ہو وہی دوست ہے،<br>اچھے وقت میں تو گلی کے کتے بھی ساتھ چلتے ہیں۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="dost">
+                <div class="card-meta-tag">FRIENDS POETRY - 10</div>
+                <p class="urdu-poetry-content-line">یار زندہ صحبت باقی رہے گی ہمیشہ،<br>ہماری دوستی کی مثال یہ دنیا یاد رکھے گی۔ (نافع)</p>
+            </div>
+
+            <!-- Category 11: Mixed Custom With Name (10 Cards) -->
+            <div class="poetry-card-node" data-category="mixname">
+                <div class="card-meta-tag">MIXED REGISTRY - 01</div>
+                <p class="urdu-poetry-content-line">کسی پر یقین نہ کرنا اے دل اس مطلبی دنیا میں،<br>یہاں ہر چہرہ بدل جاتا ہے وقت پر اے نافع۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="mixname">
+                <div class="card-meta-tag">MIXED REGISTRY - 02</div>
+                <p class="urdu-poetry-content-line">محبت کا دعویٰ تو ہر کوئی کرتا ہے بازار میں،<br>وفا کی امید کسی سے نہ رکھنا اے نافع۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="mixname">
+                <div class="card-meta-tag">MIXED REGISTRY - 03</div>
+                <p class="urdu-poetry-content-line">ہم نے تو اپنی زندگی ہی وار دی تھی ان پر،<br>مگر وہ قدر کرنا ہی بھول گئے اے نافع۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="mixname">
+                <div class="card-meta-tag">MIXED REGISTRY - 04</div>
+                <p class="urdu-poetry-content-line">کامیابی کا تاج سجے گا ایک دن سر پر ضرور،<br>بس خاموشی سے اپنی جنگ جاری رکھ اے نافع۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="mixname">
+                <div class="card-meta-tag">MIXED REGISTRY - 05</div>
+                <p class="urdu-poetry-content-line">ماں کی دعا کے بغیر منزل کا ملنا ناممکن ہے،<br>ان کے قدموں میں ہی ساری کائنات ہے اے نافع۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="mixname">
+                <div class="card-meta-tag">MIXED REGISTRY - 06</div>
+                <p class="urdu-poetry-content-line">راتوں کی تنہائی سے اب ڈر نہیں لگتا ہمیں،<br>ہم نے اندھیروں کو اپنا بنانا سیکھ لیا اے نافع۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="mixname">
+                <div class="card-meta-tag">MIXED REGISTRY - 07</div>
+                <p class="urdu-poetry-content-line">وقت کا دھارا بدل دیں گے اپنے بازوؤں کے زور پر،<br>تقدیر کے لکھے پر اب شکوہ نہ کر اے نافع۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="mixname">
+                <div class="card-meta-tag">MIXED REGISTRY - 08</div>
+                <p class="urdu-poetry-content-line">یاروں کی یاری ہی میری زندگی کا سرمایہ ہے،<br>غداروں کو اوقات دکھانا فرض ہے تیرا اے نافع۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="mixname">
+                <div class="card-meta-tag">MIXED REGISTRY - 09</div>
+                <p class="urdu-poetry-content-line">تیرا نام ہی کافی ہے محفل میں اگ لگانے کے لیے،<br>اپنے اصولوں پر کبھی سمجھوتہ نہ کر اے نافع۔ (نافع)</p>
+            </div>
+            <div class="poetry-card-node" data-category="mixname">
+                <div class="card-meta-tag">MIXED REGISTRY - 10</div>
+                <p class="urdu-poetry-content-line">لوگوں کے طعنوں کو اپنی طاقت کا ایندھن بنا،<br>جیت کا پرچم لہرانا ہے تجھے کائنات میں اے نافع۔ (نافع)</p>
+            </div>
+
         </section>
 
-        <!-- Centralized Support Help Text Node -->
-        <section id="helpSection" style="max-width: 1100px; margin: 40px auto; padding: 0 40px;">
-            <div class="interaction-card-block" style="width: 100%;">
-                <h3>HELP & REPOSITORY ASSISTANCE</h3>
-                <p style="font-size: 14px; line-height: 1.8; opacity: 0.85;">
-                    Welcome to the 4th centralized terminal. This module assists in publishing user scripts and indexing literature records. For immediate donation setups, structural adjustments, or local helper coordination in Pakpattan Sharif, utilize the secure dispatch options above.
-                </p>
-            </div>
-        </section>
-
-        <!-- Social Connectivity Core Gateway -->
-        <section class="social-connectivity-hub">
-            <h3 style="text-transform: uppercase; letter-spacing: 3px; font-size: 16px;">FOLLOW OFFICIAL MEDIA STREAM</h3>
-            <div class="social-grid-flex">
-                <a href="https://www.tiktok.com/@pakpattan321" target="_blank" class="social-anchor-node">TIKTOK (@pakpattan321)</a>
-                <a href="https://www.instagram.com/maliknafay321" target="_blank" class="social-anchor-node">INSTAGRAM (@maliknafay321)</a>
+        <!-- Dynamic Control Interface Units -->
+        <section id="helpNode" style="max-width: 1200px; margin: 40px auto; padding: 0 20px;">
+            <div style="background: var(--card-surface); padding: 40px; border: 1px solid var(--border-muted); border-radius: 6px;">
+                <h3 style="font-family: 'Playfair Display', serif; margin-bottom: 20px; text-transform: uppercase;">HELP & DOCUMENTATION DIRECTORY</h3>
+                <p style="font-size: 13px; line-height: 1.8; opacity: 0.8;">Welcome to the 6th configuration setup of Nafay Write Official. Use the filter navigation blocks above to toggle data streams seamlessly. For dynamic issues, authenticate via the executive system terminal.</p>
+                <button id="contactNode" class="ui-action-btn" style="margin-top: 20px;">CONTACT SYSTEMS SUPPORT</button>
             </div>
         </section>
     </main>
 
-    <!-- Base Operational Footer Frame -->
+    <!-- Secure Authorization Dynamic Sign-In Modal Layer -->
+    <div id="signInModal">
+        <div class="sign-in-box-module">
+            <h3>PORTAL SECURITY AUTHORIZATION</h3>
+            <form action="#" method="POST" onsubmit="processUserAuth(event)">
+                <input type="text" id="authUsername" class="form-input-pipeline" placeholder="ENTER ACCESS HANDLE" required>
+                <input type="password" id="authPassword" class="form-input-pipeline" placeholder="SECURE KEY PHRASE" required>
+                <button type="submit" class="dispatch-system-btn">EXECUTE SIGN IN</button>
+            </form>
+            <button class="system-modal-close-trigger" onclick="toggleSignInSystem(false)">CANCEL PIPELINE</button>
+        </div>
+    </div>
+
+    <!-- Branded Production Level Footer Layer -->
     <footer>
-        <div class="footer-sig-line">MALIK NAFAY NETWORK PTV (LTD)</div>
-        <div class="footer-sub-text">© 2026 NAFAY WRITEX. DEVELOPED & LOGGED SEAMLESSLY FROM PAKPATTAN SHARIF. ALL RIGHTS RESERVED.</div>
+        <div class="support-wrapper-box">
+            <button class="ui-action-btn" style="background: linear-gradient(to right, #D4A373, #A37343); color: #1E251A; font-weight: bold; border: none;">SUPPORT MY WORK</button>
+        </div>
+        <div class="footer-social-wrapper">
+            <a href="https://www.tiktok.com/@pakpattan321" target="_blank" class="social-icon-anchor">TIKTOK</a>
+            <a href="https://www.instagram.com/maliknafay321" target="_blank" class="social-icon-anchor">INSTAGRAM</a>
+        </div>
+        <div class="branded-copyright-note">© 2026 Malik Nafay Studio | All Rights Reserved.</div>
     </footer>
 
+    <!-- INTERACTIVE ALGORITHMIC LOGIC MARKUP -->
+    <script>
+        /* ==========================================================================
+           1. CUSTOM FLOATING DOT MOUSE ORIENTATION LOGICS
+           ========================================================================== */
+        const cursor = document.getElementById('customCursor');
+        
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        // Scale Up interaction on poetry text nodes
+        const textualLayers = document.querySelectorAll('.urdu-poetry-content-line');
+        textualLayers.forEach(layer => {
+            layer.addEventListener('mouseenter', () => cursor.classList.add('hover-active'));
+            layer.addEventListener('mouseleave', () => cursor.classList.remove('hover-active'));
+        });
+
+        /* ==========================================================================
+           2. STAGGERED FADE-IN INTERSECTION OBSERVERS (Animation Feature 03)
+           ========================================================================== */
+        const nodes = document.querySelectorAll('.poetry-card-node');
+        
+        const cardObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if(entry.isIntersecting) {
+                    // Stagger effect setup logic via index multiplication timeout
+                    setTimeout(() => {
+                        entry.target.classList.add('reveal-node');
+                    }, index * 80);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        nodes.forEach(node => cardObserver.observe(node));
+
+        /* ==========================================================================
+           3. CATEGORY DATA MATRIX FILTER SELECTION ARCHITECTURE
+           ========================================================================== */
+        function filterDataMatrix(category) {
+            // Manage Active Filter Button Aesthetics
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => btn.classList.remove('active-category'));
+            event.target.classList.add('active-category');
+
+            nodes.forEach(node => {
+                node.classList.remove('reveal-node'); // Reset execution animation
+                if (category === 'all' || node.getAttribute('data-category') === category) {
+                    node.style.display = 'block';
+                    // Re-trigger staggered presentation sequence frames
+                    setTimeout(() => node.classList.add('reveal-node'), 50);
+                } else {
+                    node.style.display = 'none';
+                }
+            });
+        }
+
+        /* ==========================================================================
+           4. SECURE SIGN IN MODAL ROUTING & FORM HANDLERS
+           ========================================================================== */
+        function toggleSignInSystem(openStatus) {
+            const modal = document.getElementById('signInModal');
+            if(openStatus) {
+                modal.classList.add('modal-open');
+            } else {
+                modal.classList.remove('modal-open');
+            }
+        }
+
+        function processUserAuth(event) {
+            event.preventDefault();
+            const user = document.getElementById('authUsername').value;
+            alert('SYSTEM NOTE: Credential Layer Auth Completed for User: ' + user + '. Welcome to Nafay Write Official Terminal!');
+            toggleSignInSystem(false);
+        }
+    </script>
 </body>
 </html>
-<!-- ==========================================================================
-     HIGH-DENSITY DATA ARCHITECTURE LAYER (PRODUCTION FLOW MULTIPLIER)
-     ========================================================================== -->
-<!-- COMPONENT ROW PIPELINE STRUCTURAL MATRIX VALUE 0001 -->
-<!-- MALIK NAFAY NETWORK CENTRAL REPOSITORY ACCESS POINT DESIGNED BY MALIK NAFAY STUDIO -->
-<!-- SERVERS LINKED DIRECTLY TO ENTERPRISE DEPLOYMENTS OPERATIONAL LOGS IN PAKPATTAN SHARIF -->
-<!-- EMERGENCY PIPELINE ALGORITHMS MONITOR FOR REALTIME RESPONSES AND THE TEAM REPLIES EARLY -->
-<!-- CHARCOAL DARK SCHEME INCORPORATED THROUGHOUT STYLESHEET MARKUPS TO MEET SYSTEM SPECIFICATIONS -->
-<!-- COMPONENT ROW PIPELINE STRUCTURAL MATRIX VALUE 0002 -->
-<!-- MALIK NAFAY NETWORK CENTRAL REPOSITORY ACCESS POINT DESIGNED BY MALIK NAFAY STUDIO -->
-<!-- SERVERS LINKED DIRECTLY TO ENTERPRISE DEPLOYMENTS OPERATIONAL LOGS IN PAKPATTAN SHARIF -->
-<!-- EMERGENCY PIPELINE ALGORITHMS MONITOR FOR REALTIME RESPONSES AND THE TEAM REPLIES EARLY -->
-<!-- CHARCOAL DARK SCHEME INCORPORATED THROUGHOUT STYLESHEET MARKUPS TO MEET SYSTEM SPECIFICATIONS -->
-<!-- COMPONENT ROW PIPELINE STRUCTURAL MATRIX VALUE 0003 -->
-<!-- MALIK NAFAY NETWORK CENTRAL REPOSITORY ACCESS POINT DESIGNED BY MALIK NAFAY STUDIO -->
-<!-- SERVERS LINKED DIRECTLY TO ENTERPRISE DEPLOYMENTS OPERATIONAL LOGS IN PAKPATTAN SHARIF -->
-<!-- EMERGENCY PIPELINE ALGORITHMS MONITOR FOR REALTIME RESPONSES AND THE TEAM REPLIES EARLY -->
-<!-- CHARCOAL DARK SCHEME INCORPORATED THROUGHOUT STYLESHEET MARKUPS TO MEET SYSTEM SPECIFICATIONS -->
-<!-- COMPONENT ROW PIPELINE STRUCTURAL MATRIX VALUE 0004 -->
-<!-- MALIK NAFAY NETWORK CENTRAL REPOSITORY ACCESS POINT DESIGNED BY MALIK NAFAY STUDIO -->
-<!-- SERVERS LINKED DIRECTLY TO ENTERPRISE DEPLOYMENTS OPERATIONAL LOGS IN PAKPATTAN SHARIF -->
-<!-- EMERGENCY PIPELINE ALGORITHMS MONITOR FOR REALTIME RESPONSES AND THE TEAM REPLIES EARLY -->
-<!-- CHARCOAL DARK SCHEME INCORPORATED THROUGHOUT STYLESHEET MARKUPS TO MEET SYSTEM SPECIFICATIONS -->
-<!-- COMPONENT ROW PIPELINE STRUCTURAL MATRIX VALUE 0005 -->
-<!-- MALIK NAFAY NETWORK CENTRAL REPOSITORY ACCESS POINT DESIGNED BY MALIK NAFAY STUDIO -->
-<!-- SERVERS LINKED DIRECTLY TO ENTERPRISE DEPLOYMENTS OPERATIONAL LOGS IN PAKPATTAN SHARIF -->
-<!-- EMERGENCY PIPELINE ALGORITHMS MONITOR FOR REALTIME RESPONSES AND THE TEAM REPLIES EARLY -->
-<!-- CHARCOAL DARK SCHEME INCORPORATED THROUGHOUT STYLESHEET MARKUPS TO MEET SYSTEM SPECIFICATIONS -->
